@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "White Rabbit";
+  src: url("../assets/fonts/WHITRABT.woff");
+}
+
+//variables colors
+$whitish: #818181;
+$greenish: #00770f;
+
+//variable fonts
+$mainFont: "White Rabbit";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: fit-content;
+  height: 100vh;
+//   opacity: 0;
+}
+
+.content{
+    opacity: 0;
+}
+
+.white {
+  color: rgb(209, 209, 209);
+}
+
+.green {
+  color: $greenish;
+}
+
+.heading-hero {
+  font-family: $mainFont;
+  font-size: 1.7em;
+}
+
+.im {
+  font-family: $mainFont;
+  font-size: 1.8em;
+  color: $whitish;
+}
+
+.call-to-action {
+  background: transparent;
+  color: $whitish;
+  border: none;
+  outline: none;
+  font-family: $mainFont;
+  font-size: 1.6em;
+  margin-top: 50px;
+  position: relative;
+  padding: 10px 30px;
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    transition: 0.5s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+  }
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 150%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    background-color: $greenish;
+    border-radius: 10px;
+    z-index: -1;
+  }
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 0%;
+  background-color: $greenish;
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+}
+
+.vertical-line {
+  height: 0%;
+  width: 5px;
+  background-color: $greenish;
+  position: absolute;
+  left: 150px;
+  top: 0px;
+}
+
+.hamburger {
+    opacity: 0;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .line {
+    width: 40px;
+    height: 5px;
+    background-color: $greenish;
+    position: absolute;
+    // top: 100px;
+    right: 50px;
+    border-radius: 20px;
+  }
+
+  @for $var from 1 to 4 {
+    .line:nth-child(#{$var}) {
+      top: calc(50px + #{$var * 12}px);
+    }
+  }
+}

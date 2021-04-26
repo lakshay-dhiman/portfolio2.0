@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: 'White Rabbit';
+  src: url('../assets/fonts/WHITRABT.woff');
+}
+
+.welcome{
+  color: green;
+  margin: 100px;
+}
+
+.Typewriter__wrapper, .Typewriter__cursor{
+  font-size: 1.5em;
+font-family: 'White Rabbit';
+}
