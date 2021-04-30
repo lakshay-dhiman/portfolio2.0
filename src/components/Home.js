@@ -1,11 +1,14 @@
 import React from 'react'
-import '../style/Home.scss'
 import Hero from './Hero'
+import CollapsableNav from './CollapsableNav'
 
 const Home = ()=>{
 
     return(
-        <Hero/>
+        <div>
+            <Hero/>
+            <CollapsableNav/>
+        </div>
     )
 }
 

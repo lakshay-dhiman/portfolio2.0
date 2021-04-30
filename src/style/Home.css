@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "White Rabbit";
+  src: url("../assets/fonts/WHITRABT.woff");
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100vh;
+}
+
+.content {
+  opacity: 0;
+}
+
+.white {
+  color: #d1d1d1;
+}
+
+.green {
+  color: #00770f;
+}
+
+.heading-hero {
+  font-family: "White Rabbit";
+  font-size: 1.7em;
+}
+
+.im {
+  font-family: "White Rabbit";
+  font-size: 1.8em;
+  color: #818181;
+}
+
+.call-to-action {
+  background: transparent;
+  color: #818181;
+  border: none;
+  outline: none;
+  font-family: "White Rabbit";
+  font-size: 1.6em;
+  margin-top: 50px;
+  position: relative;
+  padding: 10px 30px;
+}
+
+.call-to-action:hover {
+  cursor: pointer;
+  color: black;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.call-to-action:hover::before {
+  width: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.call-to-action::before {
+  content: "";
+  width: 5px;
+  height: 150%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0px;
+  background-color: #00770f;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 0%;
+  background-color: #00770f;
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+}
+
+.vertical-line {
+  height: 0%;
+  width: 5px;
+  background-color: #00770f;
+  position: absolute;
+  left: 150px;
+  top: 0px;
+}
+
+.hamburger {
+  opacity: 0;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 40px;
+  height: 5px;
+  background-color: #00770f;
+  position: absolute;
+  right: 50px;
+  border-radius: 20px;
+}
+
+.hamburger .line:nth-child(1) {
+  top: calc(50px + 12px);
+}
+
+.hamburger .line:nth-child(2) {
+  top: calc(50px + 24px);
+}
+
+.hamburger .line:nth-child(3) {
+  top: calc(50px + 36px);
+}
+/*# sourceMappingURL=Home.css.map */
