@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda&family=Sarala&display=swap');
+
+.jocks{
+    margin-top: 400px;
+    position: relative;
+    margin-left: 100px;
+    h1{
+        font-family: 'Sarala', sans-serif;
+        color: white;
+        font-size: 6em;
+        margin-bottom: 0px;
+    }
+
+    p{
+        font-family: 'Ruda', sans-serif;
+        font-size: 2em;
+        margin-bottom: 450px;
+        span{
+            color: #00770F;
+        }
+    }
+
+    .loud{
+        font-family: 'Ruda', sans-serif;
+        position: absolute;
+        font-size: 33vw;
+        color: #0F0F0F;
+        top: -50px;
+        transform: rotate(-19deg) translate(-50px,0px);
+        z-index: -10;
+    }
+
+    .sorry{
+        text-align: right;
+        font-family: 'Ruda', sans-serif;
+        font-size: 1.8em;
+        margin-right: 100px;
+    }
+
+}
+
+@media(max-width: 1400px){
+    .jocks{
+        h1{
+            font-size: 3em;
+        }     
+        p{
+            font-size: 1.5em;
+            margin-bottom: 350px;
+        }   
+        .sorry{
+            margin-right: 20px;
+            font-size: 1.3em;
+        }
+    }
+
+}
+
+@media (max-width : 850px){
+    .jocks{
+        margin-left: 50px;
+    }
+}
+
+@media(max-width : 500px){
+    .jocks{
+        margin-left: 20px;
+        h1{
+            font-size: 2em;
+        }
+        p{
+            font-size: 1em;
+            margin-bottom: 200px;
+            margin-right: 10px;
+        }
+
+        .loud{
+            transform: translate(0px, 150px) rotate(-19deg);
+
+        }
+    }
+}

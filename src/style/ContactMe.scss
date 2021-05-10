@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;900&family=Source+Code+Pro&display=swap');
+ 
+.contact-me{
+    margin-left:100px;
+    margin-top: 300px;
+    margin-bottom: 250px;
+    .subhead{
+        font-family: 'Source Code Pro', monospace;
+        color: #8E8E8E;
+        font-size: 2em;
+    }
+    h1{
+        font-family: 'Ruda', sans-serif;
+        font-size: 3.5em;
+        color: #00770f;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        .field{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: 10px 0px 20px 0px;
+        }
+
+        .background{
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            background: #1a5d1a;
+            border-radius: 5px;
+            transition: 0.2s ease-in-out; 
+        }
+
+        label{
+            color: #a5a5a5; 
+            font-family: 'Ruda', sans-serif;
+            font-size: 1.2em;
+            position: absolute;
+            top: 13px;
+            font-weight: 800;
+            // width: 80px;
+            // border-radius: 5px;
+            // height: 100%;
+            // background: green;
+            padding: 0px 30px ;
+             transition: 0.2s ease-in-out; 
+        }
+
+        input:not([type='submit']) , textarea{
+            height: 50px;
+            background: #202020;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 1.2em;
+            padding-left: 20px;
+            color: #cfcfcf;
+            font-family:'Ruda', sans-serif;
+            transition: 0.2s ease-in-out; 
+            &:focus {
+                padding: 0px 20px 0px 140px;
+            }
+            &:not(:placeholder-shown) {
+                padding: 0px 20px 0px 140px;
+            }
+
+            &:focus ~ label{
+                color:#000; 
+                transition: 0.2s ease-in-out;         
+            }
+            &:not(:placeholder-shown) ~ label{
+                color:#000;
+                transition: 0.2s ease-in-out;              
+            }
+
+            &:focus ~ .background{
+                width: 130px;
+                transition: 0.2s ease-in-out;            
+            }
+            &:not(:placeholder-shown) ~ .background{
+                width: 130px;
+                transition: 0.2s ease-in-out;                
+            }
+
+        }
+
+        .submit{
+            background: transparent;
+            outline: none;
+            border: none;
+            color: #00770F;
+            font-size: 2em;
+            text-align: right;
+            margin-top: 10px;
+            font-family: 'Ruda', sans-serif;
+            font-weight: 900;
+        }
+ 
+
+        textarea{
+            height: 250px;
+            padding-top: 10px;
+            resize: none; 
+
+            &:focus {
+                padding: 10px 20px 0px 140px;
+            }
+            &:not(:placeholder-shown) {
+                padding: 10px 20px 0px 140px;
+            }
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: transparent;
+        }
+
+
+
+    }
+
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .right-part{
+        .social-links{
+            .social-link{
+                margin: 20px;
+            }
+        }
+        .gif{
+            img{
+                width: 300px;
+                height: auto; 
+                transform: translateX(+100px);               
+            }
+            a{
+                color: rgb(75, 75, 75);
+                // text-decoration: none;
+                transform: translateY(-50px);
+            }
+
+        }
+    }
+}
+
+@media(max-width : 1400px){
+    .contact-me form textarea{
+        height: 200px;
+    }
+    .contact-me .right-part .gif img{
+        width: 250px;
+    }
+}
+
+@media(max-width: 1200px){
+    .contact-me{
+        margin-bottom: 200px;
+        form{
+            width: 60vw;
+            margin-top: 100px;
+        }
+        .contact-wrapper{
+            display: block;
+            .right-part{
+                margin-top: 200px;
+                .gif{
+                    display: none;
+                }
+                .social-links{
+                    display: flex;
+                    margin: auto;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 850px){
+    .contact-me{
+        margin-left: 50px;
+
+        form{
+            width: 70vw;
+        }
+        .contact-wrapper{
+            display: block;
+            .right-part{
+                margin-top: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width : 500px){
+    .contact-me{
+        margin-left: 20px;
+        .subhead{
+            font-size: 1.2em;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+
+            form{
+                width: 90vw;
+                margin-top: 50px;
+                .field{
+                margin: 10px 0px;
+            }
+        }
+
+    .right-part{
+        .social-links{
+            .social-link{
+                svg{
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,oCAAoC;;;AAG3C,AAAA,QAAQ,CAAA;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd;;AAED,AAAA,oBAAoB,EAAE,mBAAmB,CAAA;EACvC,SAAS,EAAE,KAAK;EAClB,WAAW,EAAE,cAAc;CAC1B",
-    "sources": [
-        "SplashText.scss"
-    ],
-    "names": [],
-    "file": "SplashText.css"
-}

@@ -6,8 +6,9 @@ import Roboto from "../assets/fonts/Roboto Black_Regular.json"
 import { unmountComponentAtNode} from "react-dom";
 import ReactDOM from "react-dom";
 
-import Home from './Home'
+
 import '../style/SplashBinary.scss'
+import App from '../Routes';
 
 
 //text component
@@ -156,7 +157,7 @@ const Camera = ()=>{
       }else{
         unmountComponentAtNode(document.querySelector('.splash .binary'));
         ReactDOM.render(
-          <Home/>,
+          <App/>,
           document.querySelector('#root')
         )
       }

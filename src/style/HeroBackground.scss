@@ -1,0 +1,27 @@
+
+.hero-background{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0px;
+    // z-index: -100;
+    .box{
+        width: calc(calc(100vw - 10px) / 10);
+        height:  calc(calc(100vw - 10px) / 10);
+        background: #9fd6a63d;
+        opacity: 0;
+        transition: opacity 2s ease 0.4s, transform 0.8s ease;
+        transform: scale(1);
+        background-image: url('../assets/images/misc/square-background.svg') ;
+        
+        &:hover{
+            opacity:1;
+            // transition: 0.4s ease-out;
+            transition: opacity 0.2s ease;
+            transform: scale(1.04);
+        }
+    }
+
+
+}

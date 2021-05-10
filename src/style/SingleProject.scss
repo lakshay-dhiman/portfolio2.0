@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@400;900&display=swap");
+
+.single-project {
+  font-family: "Ruda", sans-serif;
+  // padding: 0px 290px;
+
+  .logo {
+    transform: scale(1);
+    top: 25px;
+    left: 50px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    &::after {
+      content: "<- go to portfolio";
+      width: 100%;
+      height: max-content;
+      color: #646464;
+      font-size: 0.4em;
+      text-align: right;
+      margin-top: 10px;
+    }
+  }
+  .back {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    z-index: -1;
+    &::before {
+      content: "BACK";
+      width: fit-content;
+      height: 100%;
+      color: #00770f;
+      font-size: 1em;
+      padding-right: 10px;
+      margin: auto;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header {
+    position: relative;
+    z-index: 1;
+    border-top: #646464 1px solid;
+    border-bottom: #646464 1px solid;
+    display: grid;
+    margin-top: 150px;
+    .header-wrapper {
+      padding: 20px 290px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+    }
+    .left-part {
+      h1 {
+        color: #00770f;
+        font-size: 2.5em;
+        margin-bottom: 0px;
+      }
+      h2 {
+        color: #a4a4a4;
+        font-size: 1.2em;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+    }
+
+    .right-part {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .technologies {
+        margin: auto 20px;
+        position: relative;
+        p {
+          color: #939393;
+        }
+        img {
+          margin-right: 20px;
+          margin-top: 10px;
+        }
+
+        // &:after{
+        //     content: "";
+        //     width: 1px;
+        //     height: 90%;
+        //     position: absolute;
+        //     background: #939393;
+        //     top: 50%;
+        //     right: -50px;
+        //     transform: translateY(-50%);
+        // }
+        border-right: 1px #646464 solid;
+        padding: 0px 30px;
+      }
+
+      .visit {
+        margin: auto;
+        margin-right: 0px;
+        transform: translateY(10px);
+
+        a {
+          color: #00770f;
+          font-size: 1.2em;
+        }
+        p {
+          color: #646464;
+          font-size: 1em;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .main {
+    position: relative;
+    padding: 0px 290px;
+    z-index: 1;
+    .main-info {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      margin-top: 100px;
+
+      .description {
+        color: #afafaf;
+        line-height: 50px;
+        font-size: 1.2em;
+
+        ul {
+          margin-top: 0px;
+          line-height: 25px;
+          display: flex;
+          flex-direction: row;
+          width: 70%;
+          flex-wrap: wrap;
+          li {
+            margin-right: 50px;
+            width: max-content;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .project-image {
+        margin: auto;
+        img {
+          border-radius: 10px;
+          margin-left: 50px;
+        }
+      }
+    }
+
+    .image-gallery {
+      margin-top: 70px;
+      h1 {
+        color: #00770f;
+        margin-bottom: 50px;
+      }
+      .images-block {
+        img {
+          margin-right: 20px;
+          margin: 30px;
+          &:hover {
+            cursor: zoom-in;
+          }
+        }
+      }
+    }
+
+    .link-to-big {
+      margin: 150px auto;
+      width: fit-content;
+      background: #27692f;
+      padding: 25px;
+      border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+
+      a {
+        color: rgb(226, 226, 226);
+        font-weight: 900;
+        font-size: 1.5em;
+        text-decoration: none;
+      }
+    }
+  }
+  .overlay-image {
+    width: 200%;
+    height: 200%;
+    position: fixed;
+    z-index: -1;
+    .image-overlay {
+      .backdrop {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(100, 100, 100, 0.767);
+        z-index: +5;
+        left: 0px;
+        top: -150px;
+        position: absolute;
+        &:hover {
+          cursor: zoom-out;
+        }
+      }
+
+      .image {
+        position: absolute;
+        z-index: 20;
+        left: 50vw;
+        top: calc(50vh - 150px);
+        transform: translate(-50%, -50%);
+        max-width: 80vw;
+        max-height: 80vh;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .single-project {
+    .header {
+      .header-wrapper {
+        padding: 20px 150px;
+      }
+    }
+    .main {
+      padding: 0px 150px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .single-project {
+    .header {
+      .header-wrapper {
+        padding: 20px 50px;
+      }
+    }
+    .main {
+      padding: 0px 50px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .single-project {
+    .header {
+      .header-wrapper {
+        grid-template-columns: 1fr;
+        .left-part {
+          h2 {
+            margin-bottom: 30px;
+          }
+        }
+        .right-part {
+          padding: 30px 0px;
+          border-top: 1px rgba(44, 44, 44, 0.575) solid;
+
+          .technologies {
+            margin-left: 0px;
+            padding: 0px;
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+
+    .main {
+      .main-info {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .description {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .single-project {
+      img {
+        max-width: 80vw !important;
+        margin: auto !important;
+      }
+
+      .main,
+      .header .header-wrapper {
+        padding: 20px;
+      }
+
+      .main .image-gallery .images-block img {
+        margin-right: 20px !important;
+        margin-top: 20px !important;
+      }
+
+      .logo
+    
+
+    .main
+    .link-to-big a{
+      font-size: 1.2em !important; 
+    }
+
+    .header{
+        .header-wrapper{
+          .right-part{
+            .visit{
+              p{
+                font-size: 0.9em;
+                text-align: left;
+              }
+              a{
+                text-align: right;
+              }
+            }
+              // grid-template-columns: ;
+              .technologies{
+                  padding-right: 5px !important;
+                  img{
+                      margin-right: 10px!important;
+                      width: 20px;
+                  }
+              }
+          }          
+        }
+    }
+
+    .logo{
+      top: 30px;
+      left: 20px;
+      font-size: 1.8em;
+
+      &::after{
+        font-size: 0.5em;
+      }
+    }
+
+    .back{
+      // top: 40px;
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;800&family=Space+Mono:wght@700&display=swap');//font variables
+$oxanium : 'Oxanium', cursive;
+
+.localhost-section{
+    color: white;
+    margin-bottom: 600px;
+}
+
+.hashtag{
+    font-size: 7vw;
+    font-family: $oxanium;
+    color: #202020;
+    text-align: center;
+    margin-top: 300px;
+    font-weight: bolder;
+}
+
+
+.localhost-section
+.quote{
+    position: relative;
+    margin: 100px;
+    font-size: 3em;
+    display: flex;
+    margin-top: 500px;
+
+    p{  
+        margin: 0px;
+        margin-left: 100px;
+        font-family: $oxanium;
+        font-weight: normal;
+
+        span{
+            color: #00770f;
+        }
+    }
+}
+
+.quotation{
+    img{
+        width: 150px;
+        height: 150px;        
+    }
+
+}
+
+@media (max-width : 500px){
+    .localhost-section .quote{
+        margin-left: 20px;
+        margin-top: 350px;
+        margin-right: 0px;
+        font-size: 2em;
+        .quotation{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        p{
+            margin-left: 40px;
+        }
+    }
+}

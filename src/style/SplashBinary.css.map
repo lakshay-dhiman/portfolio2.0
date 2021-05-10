@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,UAAU,EAAE,KAAK;CACpB",
-    "sources": [
-        "SplashBinary.scss"
-    ],
-    "names": [],
-    "file": "SplashBinary.css"
-}

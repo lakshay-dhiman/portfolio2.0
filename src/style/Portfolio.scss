@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruda&family=Source+Code+Pro:wght@700&display=swap");
+body {
+  color: white;
+}
+
+.portfolio {
+  position: relative;
+
+  h1 {
+    color: #00770f;
+    font-family: "Source Code Pro", monospace;
+    font-size: 5em;
+    margin-left: 100px;
+  }
+
+  p {
+    margin-left: 100px;
+    width: 40vw;
+    font-family: "Ruda", sans-serif;
+    color: rgb(168, 168, 168);
+    font-size: 1.2em;
+  }
+
+  .work {
+    font-family: "Ruda", sans-serif;
+    color: #131212;
+    font-size: 25vw;
+    position: absolute;
+    top: -550px;
+    // right: 122px;
+    right:18%;
+    z-index: -1;
+  }
+}
+
+.projects-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 70px;
+
+  img{
+    width: calc(calc(100vw - 10px) / 5);
+  }
+  
+
+  .project-wrapper{
+    overflow: hidden;
+    position: relative;
+    .overlay-dark{
+      background: rgba(0, 0, 0, 0.63);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:hover img{
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    &:hover .overlay-dark{
+      background: transparent;
+      transition: 0.5s;
+
+    }
+
+    &:hover .overlay-knowmore{
+      opacity: 1;
+      transition: 0.5s;
+    }
+
+    .overlay-knowmore{
+      color: white;
+      position: absolute;
+      top:0px;
+      right: 0px;
+      background: rgb(189, 76, 76);
+      padding: 10px 50px;
+      transform: rotate(45deg) translate(54px, -19px);
+      opacity: 0;
+    }
+  }
+}
+
+@media(max-width : 1400px){
+  .portfolio{
+    p{
+      width: 70vw;
+    }
+  }
+}
+
+@media(max-width : 1100px){
+      .projects-box {
+      img{
+        width: calc(100vw / 3);
+      }
+    }
+}
+
+@media(max-width : 850px){
+  .portfolio{
+    h1,p{
+      margin-left: 50px;
+    }
+
+    p{
+      width: 90vw;
+    }
+  }
+}
+
+@media(max-width : 500px){
+  .portfolio{
+    .work{
+      // font-size: 9.8em;
+      right: auto;
+      top: -230px;
+      // display: none;
+    }
+
+    h1{
+      font-size: 2.5em;
+      margin-left: 20px;
+    }
+    p{
+      font-size: 1em;
+      margin-left: 20px;
+    }
+
+    .projects-box {
+      img{
+        width: calc(100vw / 2);
+      }
+    }
+  }
+
+  .projects-box .project-wrapper .overlay-dark{
+    background-color: transparent;
+  }
+}
+
+@media (max-width : 400px){
+  .portfolio .work{
+    top:-150px
+  }
+}

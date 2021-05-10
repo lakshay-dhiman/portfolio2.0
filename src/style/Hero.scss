@@ -3,12 +3,26 @@
   src: url("../assets/fonts/WHITRABT.woff");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;800&display=swap');
+
 //variables colors
 $whitish: #818181;
 $greenish: #00770f;
 
 //variable fonts
 $mainFont: "White Rabbit";
+
+.logo{
+  font-family: 'Oxanium', cursive;
+  font-weight: 900;
+  color: $greenish;
+  transform-origin: center;
+  top: 50%;
+  left: 50%;
+  transform: scale(5);
+  position: absolute;
+  z-index: 5;
+}
 
 .hero {
   position: initial;
@@ -20,6 +34,20 @@ $mainFont: "White Rabbit";
   width: fit-content;
   height: 100vh;
   // opacity: 0;
+
+  .social-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top:30vh;
+    left:10px;
+
+    svg{
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
+  }
 }
 
 .content{
@@ -84,39 +112,45 @@ $mainFont: "White Rabbit";
     left: 5px;
     background-color: $greenish;
     border-radius: 10px;
-    // z-index: -1;
+    z-index: -1;
     transition: 0.5s ease-in-out;
   }
 }
 
-.horizontal-line {
-  height: 1px;
-  width: 0%;
-  background-color: $greenish;
-  position: absolute;
-  bottom: 150px;
-  left: 0px;
-}
-
-.vertical-line {
-  height: 0%;
-  width: 8px;
-  background-color: $greenish;
-  position: absolute;
-  left: 150px;
-  top: 0px;
+.lines{
+  .line{
+    width: 2px;
+    height: 0vw;
+    background: #033C0B;
+    position: absolute;
+    transform-origin: top;
+    transform:rotate(-60deg);
+    z-index: -10;
+    box-shadow: 0px 3px 7px #00770F;
+  }
+  .line:nth-child(1){
+    top: 31vw;
+  }
+  .line:nth-child(2){
+    top:16vw;
+  }
+  .line:nth-child(3){
+    top: 12vw;
+  }
 }
 
 .hamburger {
   position: fixed;
-  width: 40px;
-  height: 41px;
+  width: 60px;
+  height: 60px;
   top: 50px;
   right: 50px;
   z-index: 20;
+  border-radius: 50%;
   &:hover {
     cursor: pointer;
   }
+
   
   .line {
     width: 40px;
@@ -126,6 +160,9 @@ $mainFont: "White Rabbit";
     // top: 100px;
     // right: 50px;
     border-radius: 20px;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%,50%);
   }
 
   @for $var from 1 to 4 {
@@ -139,13 +176,101 @@ $mainFont: "White Rabbit";
   position: relative;
 }
 
-// .animate-hero{
-//   position: absolute;
-//   opacity: 0;
-//   width: 101%;
-//   height: calc(100% + 50px) ;
-//   transform: translateY(25px) rotate(180deg);
-//   background: black;
-//   bottom: 0px;
-//   left: 0px;
-// }
+
+.widget{
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  z-index: 5;
+}
+
+
+//responsiveness
+@media (max-width : 850px){
+  .logo{
+    transform: scale(2) translateX(-30px);
+
+  }
+  .hero .social-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom:10px;
+    top: auto;
+    left:10px;
+      svg{
+      margin: 10px;
+    }
+  }
+
+  .content{
+    // opacity: 0;
+    transform: translateX(0px);
+  }
+
+  .im {
+  font-family: $mainFont;
+  font-size: 1.2em;
+  color: $whitish;
+  }  
+  
+  .hamburger{
+    top: 15px;
+    right: 10px;
+    transform-origin: center;
+    transform: scale(0.9);
+  }
+
+  .call-to-action {
+    border: #00771063 solid 1px;
+      border-radius: 2px;
+      margin-top: 10px;
+      font-size: 1.2em;
+
+
+    &::before {
+      width: 0px;
+      height: 0%;
+    }
+  }
+
+  .widget{
+    bottom: 10px;
+    right: 20px;
+  }
+}
+
+@media (max-width :500px){
+  .hero{
+    justify-content: unset;
+    margin-left: 30px;
+  }
+
+  .content{
+    transform: unset;
+    margin-top: 200px;
+  }
+
+  .heading-hero {
+  font-family: $mainFont;
+  width: 90vw;
+    .Typewriter__wrapper, .Typewriter__cursor{
+    font-size: 1em !important;
+    }
+  }
+}
+
+@media(max-width : 400px){
+  .hero .social-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom:10px;
+    top: auto;
+    left:10px;
+      svg{
+      margin: 7px;
+      width: 30px;
+    }
+  } 
+}

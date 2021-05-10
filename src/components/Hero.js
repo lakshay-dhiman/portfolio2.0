@@ -2,46 +2,101 @@ import React,{useRef,useEffect, useState} from 'react'
 import {gsap}from 'gsap'
 import Typewriter from 'typewriter-effect'
 import '../style/Hero.scss'
+import Logo from './Logo'
+import Widget from './Widget'
+import MouseParticles from 'react-mouse-particles'
+import ContactHero from './ContactHero'
+import HeroBackground from './HeroBackground'
+import $ from 'jquery'
 
 const Hero = ()=>{
     const content = useRef()
     const horizontalLine = useRef()
     const verticalLine = useRef()
     const hamburger = useRef()
+    let logoTop , logoLeft;
+
+    const changeVal = ()=>{
+        if($(document).width() > 850){
+            logoTop = '50px';
+            logoLeft = '100px'
+        }
+        else{
+            logoTop = '0px';
+            logoLeft = '80px'
+        }
+
+        if($(document).width() > 850){
+
+        }
+    }
 
     useEffect(()=>{
+
+        window.addEventListener('resize',changeVal())
+
         let tl_entry = gsap.timeline()
-        tl_entry.to(horizontalLine.current,{
-            delay:0.5,
-            width:'100%',
-            duration:1
-        })
 
-        .to(verticalLine.current,{
-            height:'100%',
-            duration:1
-        },"-=1")
-
-        // .to(document.querySelectorAll('.animate-hero'),{
-        //     height:0,
-        //     delay:0.5,
-        //     duration:0.9,
-        //     stagger:0.2
+        //entry animation
+        tl_entry
+        // .to(document.querySelectorAll('.lines .line'),{
+        //     height:'120vw',
+        //     duration:5
         // })
+        .from(document.querySelectorAll('.logo'),{
+            opacity:0,
+            duration:2,
+            y:-100
+            // scale:5,
+            // top: '50%',
+            // left: '50%'
+        })
+        .to(document.querySelectorAll('.logo'),{
+            delay:0.5,
+            duration:2,
+            scale:1,
+            top: logoTop,
+            left: logoLeft
+        })  
 
         .from(document.querySelectorAll('.hero-content'),{
             opacity:0,
             y:-50,
             stagger:0.4
         })
-
         .from(document.querySelectorAll('.hamburger .line'),{
             x:50,
             opacity:0,
             duration:0.5,
             stagger : 0.2
-        },"-=0.2")
+        })
 
+        .from(document.querySelector('.widget'),{
+            opacity:0,
+            y:-100,
+            duration:1
+        },"-=1")
+        .from(document.querySelectorAll('.hero .social-link'),{
+            opacity:0,
+            y:-50,
+            duration:1,
+            stagger:0.2
+        },"-=2")
+        .from(document.querySelectorAll('.hero-background'),{
+            opacity:0,
+            duration:1,
+        })
+
+        // gsap.to(document.querySelector('.hero'),{
+        //     scrollTrigger:{
+        //         trigger:'.localhost-section',
+        //         start: '-100px 120%',
+        //         end:"+=500px",
+        //         markers:true,
+        //         scrub:1
+        //     },
+        //     opacity:0
+        // })
 
     },[])
     const [toDo, setToDo] = useState('show')
@@ -96,9 +151,9 @@ const Hero = ()=>{
                     document.querySelector('.nav-wrapper').classList.add('visible')
                 })
                 .to(document.querySelector('.collapsable-nav'),{
-                    clipPath : 'circle(75% at calc(110vw) 0px)'
+                    clipPath : 'circle(430px at 100vw 0px)',
+                    ease: 'SlowMo'
                 })
-                // document.querySelector('.nav-wrapper').classList.add('visible')
                 setCollapsed(false)
                 animate_cross()
                 setToDo('hide')
@@ -109,7 +164,7 @@ const Hero = ()=>{
         const hideNav = ()=>{
                 let tl_hide_nav = gsap.timeline()
                 tl_hide_nav.to(document.querySelector('.collapsable-nav'),{
-                    clipPath : 'circle(0% at calc(110vw) -0px)',
+                    clipPath : 'circle(0px at 100vw 0px)',
                     duration:0.5
                 })
                 .add(()=>{
@@ -122,16 +177,6 @@ const Hero = ()=>{
                 setToDo('show')
 
         } 
-    
-        // document.querySelector('.hamburger').addEventListener('click',()=>{
-        //     console.log(collapsed);
-        //     if(collapsed){
-        //         ShowNav()
-        //     }
-        //     // else{
-        //     //     hideNav()
-        //     // }
-        // })
 
     const action = (toDo)=>{
         if(toDo=='show'){
@@ -145,10 +190,20 @@ const Hero = ()=>{
         }
     }
 
-
     return(
-        <header>
+        <div>
+            {/* <MouseParticles g={0} color="green" cull="col,image-wrapper"/> */}
+
+            <HeroBackground/>
+            <div className='hamburger' onClick={()=>action(toDo)} ref={hamburger}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>  
             <div className="hero">
+                <Logo/>
+                <Widget/>
+                <ContactHero/>
                 <div className="content" ref={content}>
                     <div className="white im hero-content">
                         I'm A
@@ -163,6 +218,7 @@ const Hero = ()=>{
                             }}
                                 onInit={(typewriter)=>{
                                     typewriter
+                                    .pauseFor(2000)
                                     .typeString('Web Developer..')
                                     .pauseFor(1000)
                                     .deleteAll()
@@ -187,17 +243,10 @@ const Hero = ()=>{
                         <div className="animate-hero"></div>
                     </div>
                 </div>
-                <div className="lines">
-                    <div className="vertical-line" ref={verticalLine}></div>
-                    <div className="horizontal-line" ref={horizontalLine}></div>
-                </div>
-                <div className='hamburger' onClick={()=>action(toDo)} ref={hamburger}>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                </div>
+          
             </div>
-        </header>
+
+        </div>
     )
 }
 

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400&display=swap');
+
+.widget{
+    text-align: right;
+
+    .time{
+        color: green;
+        font-family: 'Oxanium', cursive;
+        font-size: 2.5em;
+        margin-bottom: 0px;
+    }
+
+    .date{
+        font-family: 'Oxanium', cursive;
+        font-size: 1.8em;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .available{
+        font-size: 1.4em;
+        color: #757575;
+        font-weight: 300;
+        font-family: 'Oxanium', cursive;
+        margin-top: 0px;
+    }
+}
+
+@media(max-width : 1400px){
+    .widget{
+        .time{
+            font-size: 2em;
+        }
+        .date{
+            font-size: 1.5em;
+        }
+
+        .available{
+            font-size:1.2em;
+        }
+    }
+
+}
+
+@media (max-width : 500px){
+    .widget{
+        .time{
+            font-size: 1.8em;
+        }
+        .date{
+            font-size: 1.3em;
+        }
+
+        .available{
+            font-size:1.2em;
+        }
+    }
+}
