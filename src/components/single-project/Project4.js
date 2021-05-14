@@ -46,14 +46,14 @@ const Project4 = (props)=>{
                 <img src={back} alt=""/>
             </div>
             <SingleProject
-                heading = 'Google Meet AutoExit'
-                subheading = 'A google chrome extension built be me'
+                heading = 'Alternative Portfolio'
+                subheading = 'The portfolio i used earlier'
                 technologies ={
                     [html,css,js,php]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://portfolio.sakujo.in'
+                linkName= 'VISIT : portfolio.sakujo.in'
                 description={
                     <div className='description'>
                     This is my earlier portfolio.

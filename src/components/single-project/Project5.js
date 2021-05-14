@@ -60,8 +60,8 @@ const Project5 = (props)=>{
                     [spotify,php,sass, react,html,css,js]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://personify.sakujo.in'
+                linkName= 'VISIT : personify.sakujo.in'
                 description={
                     <div className='description'>
                     This is a web app, which provides you with the lyrics of the song playing on your spotify account, you just need to logIn into the application with your spotify account, and the application fetches the lyrics to the song currently playing from the Genius.com. You get lyrics for most of the songs.

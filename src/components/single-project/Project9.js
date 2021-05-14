@@ -60,8 +60,8 @@ const Project9 = (props)=>{
                     [sql,react,threejs,gsap,html,css,js]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://sakujo.in'
+                linkName= 'VISIT : sakujo.in'
                 description={
                     <div className='description'>
                     This is the website you are currently on and it simply resides all my best projects.

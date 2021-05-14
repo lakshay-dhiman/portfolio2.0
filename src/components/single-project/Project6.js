@@ -61,8 +61,8 @@ const Project6 = (props)=>{
                     [unsplash,php,sql,html,css,js]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://white-balance.sakujo.in'
+                linkName= 'VISIT : white-balance.sakujo.in'
                 description={
                     <div className='description'>
                     This was the first project I created after I learnt JavaScript ans Backend PHP ans SQL.

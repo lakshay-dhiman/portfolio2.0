@@ -56,7 +56,7 @@ const Project3 = (props)=>{
                 }
                 designed={true}
                 linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://chrome.google.com/webstore'
+                linkName= 'VISIT : chrome.google.com/webstore'
                 description={
                     <div className='description'>
                     This project is a google chrome extension, with more than 1.5k users, and a total rating of more than 4 stars.

@@ -97,8 +97,8 @@ const Project2 = (props)=>{
                     [html,sass,css,js,gsap]
                 }
                 designed={false}
-                linkTo='https://chandan-waterproofing.in'
-                linkName= 'VISIT : chanda-waterproofing.in'
+                linkTo='https://kissflow.com/workflow/pricing/'
+                linkName= 'VISIT : kissflow.com'
                 description={
                     <div className='description'>
                         I worked as a front end developer for the company to develop the pricing page of some of the services. Completely responsive webpages were to be created and I was given the design which I developed using html, css, and Javascript

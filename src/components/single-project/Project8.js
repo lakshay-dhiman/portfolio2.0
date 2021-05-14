@@ -65,8 +65,8 @@ const Project8 = (props)=>{
                     [sql,django,html,css,js]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://just-click.sakujo.in'
+                linkName= 'VISIT : just-click.sakujo.in'
                 description={
                     <div className='description'>
                     This is a web-application created in Django framework of python.

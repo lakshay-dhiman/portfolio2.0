@@ -55,8 +55,8 @@ const Project7 = (props)=>{
                     [threejs,react,html,css,js]
                 }
                 designed={true}
-                linkTo='https://bit.ly/2Ry1wh9'
-                linkName= 'VISIT : https://something-some.com'
+                linkTo='http://sun-earth.sakujo.in'
+                linkName= 'VISIT : sun-earth.sakujo.in'
                 description={
                     <div className='description'>
                     It is a very simple web application which shows earth revolving around the sun.
