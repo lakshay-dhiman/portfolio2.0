@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import {gsap} from 'gsap'
+import React from 'react'
 import Footer from '../Footer'
 import SingleProject from './SingleProject'
+import {Link} from 'react-router-dom'
 
 import '../../style/SingleProject.scss'
 import back from '../../assets/images/misc/back.svg'
@@ -21,7 +21,7 @@ import imageMin3 from '../../assets/images/project_screen_shots/project3/min/pro
 import imageMax1 from '../../assets/images/project_screen_shots/project3/max/project_image1.png'
 import imageMax2 from '../../assets/images/project_screen_shots/project3/max/project_image2.png'
 import imageMax3 from '../../assets/images/project_screen_shots/project3/max/project_image3.png'
-import LargeImage from './LargeImage'
+
 
 const Project3 = (props)=>{
 /*
@@ -44,7 +44,7 @@ const Project3 = (props)=>{
         
         <div className='single-project'>
             {/* <LargeImage/> */}
-            <Logo/>
+            <Link to='/'><Logo/></Link>            
             <div className="back" onClick={goBack}> 
                 <img src={back} alt=""/>
             </div>

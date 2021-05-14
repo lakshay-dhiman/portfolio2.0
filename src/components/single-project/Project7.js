@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
-import {gsap} from 'gsap'
+import React from 'react'
+
 import Footer from '../Footer'
 import SingleProject from './SingleProject'
+import {Link} from 'react-router-dom'
 
 import '../../style/SingleProject.scss'
 import back from '../../assets/images/misc/back.svg'
@@ -10,7 +11,6 @@ import Logo from '../Logo'
 import html from '../../assets/images/technologies/html.svg'
 import css from '../../assets/images/technologies/css.svg'
 import js from '../../assets/images/technologies/javascript.svg'
-import php from '../../assets/images/technologies/php.svg'
 import react from '../../assets/images/technologies/react.svg'
 import threejs from '../../assets/images/technologies/threejs.svg'
 
@@ -44,7 +44,7 @@ const Project7 = (props)=>{
 
     return(
         <div className='single-project'>
-            <Logo/>
+            <Link to='/'><Logo/></Link>
             <div className="back" onClick={goBack}> 
                 <img src={back} alt=""/>
             </div>

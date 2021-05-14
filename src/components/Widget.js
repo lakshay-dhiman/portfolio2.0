@@ -2,8 +2,10 @@ import React,{useState, useEffect} from 'react'
 import '../style/Widget.scss'
 
 const Time = ()=>{
+    const [dayNow, setDayNow] = useState()
+    const [time, setTime] = useState('loading')
     useEffect(() => {
-        setInterval(() => {
+        const timeInterval = setInterval(() => {
             const now = new Date()
             const time = [
                 now.getHours(),
@@ -14,9 +16,11 @@ const Time = ()=>{
             const day = now.getDay()
             setDayNow(day)  
             setTime(time) 
-            console.log('time changed');
+            // console.log('time changed');
         }, 1000);
-    }, [])
+
+        return () => clearInterval(timeInterval)
+    }, [dayNow,time])
 
 
     const minutes = (minute)=>{
@@ -40,16 +44,16 @@ const Time = ()=>{
     weekday[6] = "Sat"; 
 
 
-    const [dayNow, setDayNow] = useState()
-    const [time, setTime] = useState('loading')
+
     return(
         <h1 className='time'>{time}, {weekday[dayNow]}</h1>
     )
 }
 
 const DateNow = ()=>{
+    const [date, setDate] = useState('loading')
     useEffect(()=>{
-        setInterval(() => {
+        const timeInterval = setInterval(() => {
             const now = new Date()
             const date = [
             now.getDate(),
@@ -60,10 +64,10 @@ const DateNow = ()=>{
             ]
 
         setDate(date)
-        }, 1000);        
-    })
+        }, 1000); 
+        return () => clearInterval(timeInterval)       
+    },[date])
 
-    
     const month = new Array(12)
     month[0] = 'jan';
     month[1] = 'feb';
@@ -78,7 +82,6 @@ const DateNow = ()=>{
     month[10] = 'nov';
     month[11] = 'dec';
 
-    const [date, setDate] = useState('loading')
     return(
         <h1 className='date'>{date}</h1>
     )

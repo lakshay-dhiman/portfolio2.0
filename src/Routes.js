@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from 'react'
+import React from 'react'
 import Home from './components/Home'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Project1 from './components/single-project/Project1';
@@ -9,6 +9,8 @@ import Project5 from './components/single-project/Project5';
 import Project6 from './components/single-project/Project6';
 import Project7 from './components/single-project/Project7';
 import Project8 from './components/single-project/Project8';
+import Project9 from './components/single-project/Project9';
+
 
 
 
@@ -28,6 +30,8 @@ const Routes = (props)=>{
                 <Route path='/project6' component={Project6}/>
                 <Route path='/project7' component={Project7}/>
                 <Route path='/project8' component={Project8}/>
+                <Route path='/project9' component={Project9}/>
+
 
             </Switch>
         </Router>

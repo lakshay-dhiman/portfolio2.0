@@ -11,8 +11,8 @@ const AboutMe = ()=>{
 
     const [offsetY, setOffsetY] = useState(0)
     const handleScroll = () => {
-        if(document.querySelector('.about-me .image')){
-            setOffsetY(document.querySelector('.about-me .image').getBoundingClientRect().top)
+        if(document.querySelector('#about-me .image')){
+            setOffsetY(document.querySelector('#about-me .image').getBoundingClientRect().top)
         }
     }
 
@@ -20,9 +20,9 @@ const AboutMe = ()=>{
 
     useEffect(()=>{
         
-        gsap.from(document.querySelector('.about-me .text h1'),{
+        gsap.from(document.querySelector('#about-me .text h1'),{
             scrollTrigger:{
-                trigger:'.about-me',
+                trigger:'#about-me',
                 start: "top 80%", 
                 // toggleActions: "restart none repeat none",
                 marker:true
@@ -32,9 +32,9 @@ const AboutMe = ()=>{
             opacity:0
         })
 
-        gsap.from(document.querySelector('.about-me .text p'),{
+        gsap.from(document.querySelector('#about-me .text p'),{
             scrollTrigger:{
-                trigger:'.about-me',
+                trigger:'#about-me',
                 start: "top 80%", 
                 // toggleActions: "restart none repeat none",
                 // markers:true
@@ -44,9 +44,9 @@ const AboutMe = ()=>{
             opacity:0
         })
         const tl_image = gsap.timeline()
-        tl_image.from(document.querySelector('.about-me .image'),{
+        tl_image.from(document.querySelector('#about-me .image'),{
             scrollTrigger:{
-                trigger:'.about-me',
+                trigger:'#about-me',
                 start: "top 80%", 
                 // toggleActions: "restart none repeat none",
                 marker:true
@@ -71,7 +71,7 @@ const AboutMe = ()=>{
         }
 
         let observer = new IntersectionObserver(callback, options);
-        let target = document.querySelector('.about-me .image');
+        let target = document.querySelector('#about-me .image');
         observer.observe(target);
 
         return () =>{
@@ -93,7 +93,7 @@ const AboutMe = ()=>{
     
 
     return(
-        <div className='about-me'>
+        <div id='about-me'>
             <h1>KNOW ME !!</h1>
             <div className="wrapper">
                 <div className="text"> 

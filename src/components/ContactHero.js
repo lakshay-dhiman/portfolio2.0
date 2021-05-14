@@ -51,11 +51,11 @@ const ContactHero = ()=>{
     }
     return(
         <div className="social-links">
-                <a href="#" className="social-link" onMouseEnter={changeGithub} onMouseLeave={backGithub} ><Github color={github} /></a>
-                <a href="#" className="social-link" onMouseEnter={changeWhatsap} onMouseLeave={backWhatsap} ><Whatsapp color={whatsapp} /></a>
-                <a href="#" className="social-link" onMouseEnter={changeLinkedIn} onMouseLeave={backLinkedIn} ><LinkedIn color={linkedIn} /></a>
-                <a href="#" className="social-link" onMouseEnter={changeMail} onMouseLeave={backMail} ><Mail color={mail} /></a>
-                <a href="#" className="social-link" onMouseEnter={changePhone} onMouseLeave={backPhone}  ><Call color={phone} /></a>
+                <a href="https://github.com/lakshay-dhiman" target = '_blank'  rel="noreferrer" className="social-link" onMouseEnter={changeGithub} onMouseLeave={backGithub} ><Github color={github} /></a>
+                <a href="https://api.whatsapp.com/send?phone=+919518630902&text=Hi%20there%20!!" className="social-link" target = '_blank'  rel="noreferrer" onMouseEnter={changeWhatsap} onMouseLeave={backWhatsap} ><Whatsapp color={whatsapp} /></a>
+                <a href="https://www.linkedin.com/in/lakshay-dhiman-6b337917a/" className="social-link" target = '_blank'  rel="noreferrer" onMouseEnter={changeLinkedIn} onMouseLeave={backLinkedIn} ><LinkedIn color={linkedIn} /></a>
+                <a href="mailto:sakujo1208@gmail.com" className="social-link" target = '_blank'  rel="noreferrer" onMouseEnter={changeMail} onMouseLeave={backMail} ><Mail color={mail} /></a>
+                <a href="tel:9518630902" className="social-link" target = '_blank'  rel="noreferrer" onMouseEnter={changePhone} onMouseLeave={backPhone}  ><Call color={phone} /></a>
         </div>
     )
 }

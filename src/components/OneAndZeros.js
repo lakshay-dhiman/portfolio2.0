@@ -21,24 +21,23 @@ const OnesAndZeros = ()=>{
     const string = getRandomString()
     const [numbers, setNumbers] = useState(string)
 
-    // useEffect(()=>{
-    //     const interval = setInterval(() => {
-    //         const string = getRandomString()
-    //         setNumbers(string)
-    //         console.log('working');
-    //     }, 300);
-    //     return ()=> clearInterval(interval)      
-    // })
-
-    const [counter, changeCounter] = useState(0);
     useEffect(()=>{
         const interval = setInterval(() => {
             const string = getRandomString()
             setNumbers(string)
-            changeCounter(prevCounter => prevCounter + 1);
             // console.log('working');
-        }, 1000);          
-    },[])
+        }, 300);
+        return ()=> clearInterval(interval)      
+    },[numbers])
+
+    // useEffect(()=>{
+    //     const interval = setInterval(() => {
+    //         const string = getRandomString()
+    //         setNumbers(string)
+    //         changeCounter(prevCounter => prevCounter + 1);
+    //         // console.log('working');
+    //     }, 1000);          
+    // },[])
 
 
     

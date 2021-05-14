@@ -1,6 +1,11 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url(//db.onlinewebfonts.com/c/0253e1401c58c5911902cdca02857f0e?family=White+Rabbit); */
+
+/* :root{
+  scroll-behavior: smooth;
+} */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

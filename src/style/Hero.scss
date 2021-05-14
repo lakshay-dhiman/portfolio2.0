@@ -24,7 +24,7 @@ $mainFont: "White Rabbit";
   z-index: 5;
 }
 
-.hero {
+#hero {
   position: initial;
   display: flex;
   flex-direction: column;
@@ -191,7 +191,7 @@ $mainFont: "White Rabbit";
     transform: scale(2) translateX(-30px);
 
   }
-  .hero .social-links{
+  #hero .social-links{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -232,6 +232,10 @@ $mainFont: "White Rabbit";
       width: 0px;
       height: 0%;
     }
+
+    &:hover{
+      color:$whitish
+    }
   }
 
   .widget{
@@ -241,7 +245,7 @@ $mainFont: "White Rabbit";
 }
 
 @media (max-width :500px){
-  .hero{
+  #hero{
     justify-content: unset;
     margin-left: 30px;
   }
@@ -261,7 +265,7 @@ $mainFont: "White Rabbit";
 }
 
 @media(max-width : 400px){
-  .hero .social-links{
+  #hero .social-links{
     position: absolute;
     display: flex;
     flex-direction: column;

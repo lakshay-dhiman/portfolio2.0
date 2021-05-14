@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import ReactDOM,{unmountComponentAtNode} from "react-dom";
-
-
+import React from 'react'
+import {unmountComponentAtNode} from "react-dom";
 
 
 const LargeImage = (props)=>{
@@ -15,7 +13,7 @@ const LargeImage = (props)=>{
         <div className="image-overlay">
             <div className="backdrop" onClick={unmountOverlay}></div>
             <div className="image">
-                <img src={props.src} alt="ovelay image"/>
+                <img src={props.src} alt="ovelay"/>
             </div>
         </div>
     )

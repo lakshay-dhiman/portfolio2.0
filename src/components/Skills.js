@@ -4,13 +4,13 @@ import SkillsImage from '../assets/images/misc/skills.png'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin('ScrollTrigger')
+gsap.registerPlugin(ScrollTrigger)
 
 const Skills = ()=>{
     useEffect(()=>{
         gsap.from(document.querySelector('.skills h1'),{
             scrollTrigger:{
-                trigger:'.skills',
+                trigger:'#skills',
                 start:'top 70%',
                 // toggleActions: "restart none repeat none",
             },
@@ -20,7 +20,7 @@ const Skills = ()=>{
         })  
         gsap.from(document.querySelector('.skills p'),{
             scrollTrigger:{
-                trigger:'.skills',
+                trigger:'#skills',
                 start:'top 70%',
                 // toggleActions: "restart none repeat none",
             },
@@ -31,7 +31,7 @@ const Skills = ()=>{
         
         gsap.from(document.querySelector('.skills-graphics'),{
             scrollTrigger:{
-                trigger:'.skills',
+                trigger:'#skills',
                 start:'top 70%',
                 // toggleActions: "restart none repeat none",
             },
@@ -43,7 +43,7 @@ const Skills = ()=>{
 
     })
     return(
-        <div className='skills'>
+        <div id='skills'>
             <div className='skills-graphics'>
                 <img src={SkillsImage} alt="skills"/>
             </div>

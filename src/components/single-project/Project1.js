@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import {gsap} from 'gsap'
+import React from 'react'
+import {Link} from 'react-router-dom'
 import Footer from '../Footer'
 import SingleProject from './SingleProject'
 import mainImage from '../../assets/images/projects/project1.png'
@@ -41,7 +41,7 @@ const Project1 = (props)=>{
 
     return(
         <div className='single-project'>
-            <Logo/>
+            <Link to='/'><Logo/></Link>
             <div className="back" onClick={goBack}> 
                 <img src={back} alt=""/>
             </div>

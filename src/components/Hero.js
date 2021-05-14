@@ -4,34 +4,33 @@ import Typewriter from 'typewriter-effect'
 import '../style/Hero.scss'
 import Logo from './Logo'
 import Widget from './Widget'
-import MouseParticles from 'react-mouse-particles'
 import ContactHero from './ContactHero'
 import HeroBackground from './HeroBackground'
 import $ from 'jquery'
 
 const Hero = ()=>{
     const content = useRef()
-    const horizontalLine = useRef()
-    const verticalLine = useRef()
     const hamburger = useRef()
     let logoTop , logoLeft;
 
-    const changeVal = ()=>{
-        if($(document).width() > 850){
-            logoTop = '50px';
-            logoLeft = '100px'
-        }
-        else{
-            logoTop = '0px';
-            logoLeft = '80px'
-        }
 
-        if($(document).width() > 850){
 
+    useEffect(()=>{    
+        
+        const changeVal = ()=>{
+            if($(document).width() > 850){
+                logoTop = '50px';
+                logoLeft = '100px'
+            }
+            else{
+                logoTop = '0px';
+                logoLeft = '80px'
+            }
+
+            if($(document).width() > 850){
+
+            }
         }
-    }
-
-    useEffect(()=>{
 
         window.addEventListener('resize',changeVal())
 
@@ -45,8 +44,8 @@ const Hero = ()=>{
         // })
         .from(document.querySelectorAll('.logo'),{
             opacity:0,
-            duration:2,
-            y:-100
+            duration:1,
+            scale:0
             // scale:5,
             // top: '50%',
             // left: '50%'
@@ -76,7 +75,7 @@ const Hero = ()=>{
             y:-100,
             duration:1
         },"-=1")
-        .from(document.querySelectorAll('.hero .social-link'),{
+        .from(document.querySelectorAll('#hero .social-link'),{
             opacity:0,
             y:-50,
             duration:1,
@@ -157,7 +156,7 @@ const Hero = ()=>{
                 setCollapsed(false)
                 animate_cross()
                 setToDo('hide')
-                console.log('show');   
+                // console.log('show');   
         
         }   
 
@@ -173,10 +172,16 @@ const Hero = ()=>{
                 // document.querySelector('.nav-wrapper').classList.remove('visible')
                 back_to_hamburger()
                 setCollapsed(true)
-                console.log('hide');  
+                // console.log('hide');  
                 setToDo('show')
 
         } 
+
+    const scrollPortfolio = ()=>{
+        $('html, body').animate({
+            scrollTop: $("#portfolio").offset().top
+        }, 0);
+    }
 
     const action = (toDo)=>{
         if(toDo=='show'){
@@ -186,7 +191,7 @@ const Hero = ()=>{
             hideNav()
         }
         else{
-            console.log('else');
+            // console.log('else');
         }
     }
 
@@ -200,7 +205,7 @@ const Hero = ()=>{
                 <div className="line"></div>
                 <div className="line"></div>
             </div>  
-            <div className="hero">
+            <div id="hero">
                 <Logo/>
                 <Widget/>
                 <ContactHero/>
@@ -237,7 +242,7 @@ const Hero = ()=>{
                         <div className="animate-hero"></div>
                     </div>
                     <div className="white hero-content">
-                        <button className='call-to-action'>
+                        <button className='call-to-action' onClick={scrollPortfolio}>
                             KNOW MORE !!
                         </button>
                         <div className="animate-hero"></div>

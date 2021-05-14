@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;900&family=Source+Code+Pro&display=swap');
  
-.contact-me{
+#contact-me{
     margin-left:100px;
     margin-top: 300px;
     margin-bottom: 250px;
@@ -148,19 +148,26 @@
 
         }
     }
+
+    .error{
+        color: #a01313;
+        margin-top: -10px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
 }
 
 @media(max-width : 1400px){
-    .contact-me form textarea{
+    #contact-me form textarea{
         height: 200px;
     }
-    .contact-me .right-part .gif img{
+    #contact-me .right-part .gif img{
         width: 250px;
     }
 }
 
 @media(max-width: 1200px){
-    .contact-me{
+    #contact-me{
         margin-bottom: 200px;
         form{
             width: 60vw;
@@ -185,7 +192,7 @@
 }
 
 @media (max-width : 850px){
-    .contact-me{
+    #contact-me{
         margin-left: 50px;
 
         form{
@@ -201,7 +208,7 @@
 }
 
 @media (max-width : 500px){
-    .contact-me{
+    #contact-me{
         margin-left: 20px;
         .subhead{
             font-size: 1.2em;

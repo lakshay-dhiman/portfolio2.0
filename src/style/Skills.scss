@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ruda:wght@400;800;900&display=swap");
 
-.skills {
+#skills {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   margin-top: 800px;
@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 1520px) {
-  .skills {
+  #skills {
     grid-template-columns: 1fr 1fr;
     p{
         width: 45vw;
@@ -57,7 +57,7 @@
 }
 
 @media (max-width : 1200px){
-    .skills{
+    #skills{
         display: block;
         margin-left: 50px;
         .skills-graphics{
@@ -73,7 +73,7 @@
 }
 
 @media (max-width : 500px){
-  .skills{
+  #skills{
     h1{
       font-size: 3em;
     }

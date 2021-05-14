@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from "react-dom";
-import Footer from '../Footer'
 import '../../style/SingleProject.scss'
+
 
 import {gsap} from 'gsap'
 import LargeImage from './LargeImage'
@@ -28,10 +28,12 @@ const Image = (props)=>{
 
 const SingleProject = (props)=>{
 
-    //just for scroll issues
-    document.documentElement.scrollTop = 0
+
 
     useEffect(()=>{
+        //just for scroll issues
+        document.documentElement.scrollTop = 0
+        
         if(props.animate){
             gsap.from(document.querySelectorAll('.logo, .back'),{
                 opacity: 0,
@@ -55,7 +57,7 @@ const SingleProject = (props)=>{
     })
 
     const some = ()=>{
-        console.log('somethign');
+        // console.log('somethign');
     }
 
 
@@ -100,7 +102,7 @@ const SingleProject = (props)=>{
                             {technologies}
                         </div>
                         <div className="visit">
-                            <a href={props.linkTo} target='_blank'>{props.linkName}</a>
+                            <a href={props.linkTo} target = '_blank'  rel="noreferrer">{props.linkName}</a>
                             <p>{designed}</p>
                         </div>
                     </div>
@@ -122,7 +124,7 @@ const SingleProject = (props)=>{
                     </div>
                 </div>
                 <div className="link-to-big">
-                    <a href={props.linkTo} target='_blank'>VISIT THE PROJECT HERE</a>
+                    <a href={props.linkTo} target = '_blank'  rel="noreferrer">VISIT THE PROJECT HERE</a>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import binary_img from '../assets/images/misc/oneAndZeros.png'
 import binary_img_max from '../assets/images/misc/oneAndZerosMax.png'
 
 
-gsap.registerPlugin('ScrollTrigger')
+gsap.registerPlugin(ScrollTrigger)
 
 const BinarySection = ()=>{
 
@@ -19,16 +19,17 @@ const BinarySection = ()=>{
     useEffect(() => {
         document.addEventListener('scroll',parallax)
 
-        const tl = gsap.timeline()
+        // const tl = gsap.timeline()
 
-        // tl.from(document.querySelector('.binary-section .quote'),{
+        // tl.from(document.querySelector('.binary-section .quote h1'),{
         //     scrollTrigger:{
-        //         trigger:'.binary-section .quote',
-        //         start:'top 90%',
+        //         trigger:'.binary-section .quote h1',
+        //         start:'bottom 20%',
+        //         // markers:true
         //     },
         //     // y:-50,
         //     opacity:0,
-        //     duration:4
+        //     duration:3
         // })
         // tl
         // gsap.to(document.querySelector('.binary-section .quote'),{

@@ -1,7 +1,7 @@
-import React ,{useRef,useEffect,Suspense, useState} from 'react'
+import React ,{useRef} from 'react'
 import {Canvas,useThree,useFrame} from '@react-three/fiber'
 import * as THREE from 'three'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
 import Roboto from "../assets/fonts/Roboto Black_Regular.json"
 import { unmountComponentAtNode} from "react-dom";
 import ReactDOM from "react-dom";

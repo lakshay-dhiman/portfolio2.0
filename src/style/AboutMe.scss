@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Ruda&display=swap');
-.about-me{
+#about-me{
     .wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;        
@@ -29,7 +29,7 @@
 }
 
 @media(max-width : 1520px){
-    .about-me{
+    #about-me{
         margin-left: 50px;
         p{
             width: 100%;
@@ -49,7 +49,7 @@
 }
 
 @media(max-width : 1200px){
-    .about-me{
+    #about-me{
         .image{
             img{
                 margin-top: 100px;
@@ -59,7 +59,7 @@
 }
 
 @media(max-width : 850px){
-    .about-me{
+    #about-me{
         h1{
             font-size: 3.5em;
         }
@@ -100,7 +100,7 @@
 }
 
 @media (max-width : 500px){
-    .about-me{
+    #about-me{
         h1{
             font-size: 3em;
         }

@@ -33,7 +33,7 @@ const LocalhostSection = ()=>{
 
         return() =>{
             document.removeEventListener('scroll',parallax)
-            console.log('removed');
+            // console.log('removed');
         }
             
         

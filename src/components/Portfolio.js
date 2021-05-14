@@ -1,4 +1,4 @@
-import React, { useEffect,useRef } from 'react'
+import React, { useEffect} from 'react'
 import '../style/Portfolio.scss'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -29,18 +29,18 @@ const Portfolio = ()=>{
     }
 
     useEffect(()=>{
-        gsap.from(document.querySelector('.portfolio h1'),{
+        gsap.from(document.querySelector('#portfolio h1'),{
             scrollTrigger:{
                 trigger:'.work',
                 start: "top 40%", 
                 // toggleActions: "restart none repeat none",
-                marker:true
+                // markers:true
             },
             duration:2,
             y:-50,
             opacity:0
         })
-        gsap.from(document.querySelector('.portfolio p'),{
+        gsap.from(document.querySelector('#portfolio p'),{
             scrollTrigger:{
                 trigger:'.work',
                 start: "top 40%",  
@@ -69,7 +69,7 @@ const Portfolio = ()=>{
 
     })
     return(
-        <div className="portfolio">
+        <div id="portfolio">
             <h1>MY PORTFOLIO</h1>
             <p>This is a library of the projects created by me, these include my personal projects as well as the projects I did for other companies and clients.
             <br/><br/>
@@ -89,8 +89,8 @@ const Portfolio = ()=>{
                 <ProjectsList src={project6} href='/project6'/>
                 <ProjectsList src={project7} href='/project7'/>
                 <ProjectsList src={project8} href='/project8'/>
-                <ProjectsList src={project9} />
-                <ProjectsList src={project10} />
+                <ProjectsList src={project9} href='/project9'/>
+                <ProjectsList src={project10} href='#' />
 
             </div>
         </div>

@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Footer from '../Footer'
 import SingleProject from './SingleProject'
+import {Link} from 'react-router-dom'
 
 import '../../style/SingleProject.scss'
 import back from '../../assets/images/misc/back.svg'
@@ -16,7 +17,7 @@ import sass from '../../assets/images/technologies/sass.svg'
 import mainImage from '../../assets/images/projects/project2.png'
 
 import imageMin1Project1 from '../../assets/images/project_screen_shots/project2/min/project1/project_image1.png'
-import imageMin2Project1 from '../../assets/images/project_screen_shots/project2/min/project1/project_image2.png'
+import imageMin2Project1 from '../../assets/images/project_screen_shots/project2/min/project1/project_image2.gif'
 
 import imageMax1Project1 from '../../assets/images/project_screen_shots/project2/max/project1/project_image1.png'
 import imageMax2Project1 from '../../assets/images/project_screen_shots/project2/max/project1/project_image2.gif'
@@ -51,7 +52,7 @@ const Project2 = (props)=>{
 
     return(
         <div className='single-project'>
-            <Logo/>
+            <Link to='/'><Logo/></Link>
             <div className="back" onClick={goBack}> 
                 <img src={back} alt=""/>
             </div>
@@ -69,7 +70,7 @@ const Project2 = (props)=>{
                         I worked as a front end developer for an online startup called kissflow. My task was to implement an aniimation in the hero section of the landing page. I was given with a gif from which i extracted the frames for and created an animation depicting a story, on scroll.
                         <br/>I implemented the animation using GSAP animation platform
                         <br/>I insist you to visit the page to get an better idea of the work.
-                        <br/>* I only made the hero section, rest of the page was prebuilt.
+                        <br/><br/>* I only made the hero section to animate, and frame files were provided, rest of the page was prebuilt.
                         <br/><br/>Technologies Used:
                         <ul>
                             <li>GSAP</li>
