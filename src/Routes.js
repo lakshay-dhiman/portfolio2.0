@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './components/Home'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, HashRouter} from "react-router-dom";
 import Project1 from './components/single-project/Project1';
 import Project2 from './components/single-project/Project2';
 import Project3 from './components/single-project/Project3';
@@ -19,7 +19,7 @@ const Routes = (props)=>{
 
 
     return(
-        <Router>
+        <HashRouter>
             <Switch>
                 <Route path = '/' exact component={Home}/>
                 <Route path='/project1' component={Project1}/>
@@ -31,10 +31,8 @@ const Routes = (props)=>{
                 <Route path='/project7' component={Project7}/>
                 <Route path='/project8' component={Project8}/>
                 <Route path='/project9' component={Project9}/>
-
-
             </Switch>
-        </Router>
+        </HashRouter>
     )
 }
 

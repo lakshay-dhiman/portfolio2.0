@@ -12,7 +12,13 @@ import App from './App';
 // })
 document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 
-if(!sessionStorage.getItem('visited')){
+const url = window.location.href;
+const isHome = url.split('/')[4]==''
+
+console.log(!sessionStorage.getItem('visited'));
+console.log(isHome);
+
+if(!sessionStorage.getItem('visited') && isHome){
   ReactDOM.render(
     <React.StrictMode>
       <SplashText />
